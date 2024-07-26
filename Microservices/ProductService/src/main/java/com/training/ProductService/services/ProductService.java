@@ -10,4 +10,6 @@ public interface ProductService {
     List<Product> getAll();
 
     Product getOne(int id);
+
+    List<Product> getProductsByUser(int userId);
 }

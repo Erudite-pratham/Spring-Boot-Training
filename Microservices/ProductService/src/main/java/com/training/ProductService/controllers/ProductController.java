@@ -30,4 +30,9 @@ public class ProductController {
         return productService.getOne(productId);
     }
 
+    @GetMapping("/user/{userId}")
+    public List<Product> getProductsByUser(@PathVariable int userId) {
+        return productService.getProductsByUser(userId);
+    }
+
 }
