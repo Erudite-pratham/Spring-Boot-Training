@@ -4,12 +4,17 @@
        xsi:schemaLocation="http://www.springframework.org/schema/beans
 		https://www.springframework.org/schema/beans/spring-beans.xsd">
 
-    <bean id="coach" class="org.example.CricketCoach">
 
+    <bean id="coach" class="org.training.CricketCoach">
+        <constructor-arg ref="sportsKit"/>
     </bean>
 
-    <bean id="coach1" class="org.example.TennisCoach">
+    <bean id="coach1" class="org.training.TennisCoach" scope="prototype">
+        <property name="sportsKit" ref="sportsKit"/>
+    </bean>
+    <bean id="sportsKit" class="org.training.SportsKit" scope="prototype">
 
     </bean>
 
 </beans>
+

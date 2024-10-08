@@ -14,5 +14,6 @@ public class Main {
 
         Coach coach = (Coach) context.getBean("coach1");
         System.out.println(coach.sayHello());
+        System.out.println(coach.getSportsKit());
     }
 }
